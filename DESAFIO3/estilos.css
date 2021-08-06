@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*BACKGROUND*/
+body {
+  background-color: black;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: fontCustom1;
+  src: url(./Pragmatica-ExtraLight.ttf);
+}
+
+/*CONTAINER*/
+main {
+  max-width: 1360px;
+  overflow-x: hidden;
+}
+
+/*CABEÇALHO*/
+header {
+  width: 100%;
+  padding: 1rem;
+  background-color: #daa520;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'fontCustom1';
+  letter-spacing: 2.5px;
+}
+/*SEÇÃO QUE CONTEM IMG-CONTATO*/
+section.contato {
+  background-image: url(./imagens/mundo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+/*FORMULARIO*/
+div.formulario {
+  background-color: #ffffffbb;
+  opacity: 0.9;
+  max-width: 28rem;
+  float: right;
+  margin-top: 5rem;
+  height: 370px;
+  padding: 20px;
+  margin-right: 1.7rem;
+  margin-bottom: 3.75rem;
+  font-family: 'fontCustom1';
+}
+h2.texto_Negritado {
+  font-size: 22px;
+}
+/*MARGIN DOS TEXTOS FORM*/
+.mb {
+  margin-bottom: 25px;
+}
+/*INPUTS DO FORM*/
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+/*INPUTS DO FORM*/
+input[type='submit'] {
+  color: white;
+  background-color: #2252d4;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*segunda section*/
+section.sobre_Nos {
+  margin: auto;
+  width: 100%;
+  margin-top: 3rem;
+}
+div.info_Palestrante {
+  float: right;
+  width: 50%;
+  text-justify: auto;
+  margin-right: 5rem;
+}
+div.img_Palestrante img {
+  border-radius: 50%;
+  width: 22%;
+  float: left;
+  margin-left: 14rem;
+  margin-bottom: 2rem;
+}
+/*TEXTOS SOBRE PALESTRANTE*/
+h3 {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: 'fontCustom1';
+}
+/*TEXTOS SOBRE PALESTRANTE*/
+p.p1 {
+  font-size: 24px;
+  margin-top: 15px;
+  font-weight: bold;
+  font-family: 'fontCustom1';
+  color: white;
+}

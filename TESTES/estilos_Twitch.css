@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+body {
+  width: 85rem;
+}
+
+/*Layout*/
+header {
+  width: 100%;
+  background-color: rgb(24, 24, 27);
+  height: 3.125rem;
+  box-shadow: 2px 2px 2px 2px wheat;
+  outline: 2px solid rgb(17, 3, 3);
+  box-sizing: border-box;
+}
+
+#canais {
+  width: 15rem;
+  height: 37.5rem;
+  background-color: rgb(31, 31, 35);
+  float: left;
+}
+
+#principal {
+  width: 49.125rem;
+  background-color: rgb(14, 14, 16);
+  height: 37.5rem;
+  float: left;
+  background-image: url(./revolta_Completo.png);
+  background-repeat: no-repeat;
+}
+#chat {
+  background-color: rgb(24, 24, 27);
+  width: 20.875rem;
+  height: 37.5rem;
+  float: right;
+}
+
+/*NAV*/
+header img {
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+  margin-top: 5px;
+}

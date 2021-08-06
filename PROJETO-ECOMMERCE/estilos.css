@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff159;
+  padding: 15px;
+  display: inline-block;
+}
+
+.logomais_pesquisa {
+  float: left;
+  width: 60%;
+}
+.logo {
+  float: left;
+  width: 70px;
+  margin-left: 4rem;
+  margin-top: 5px;
+}
+form {
+  float: right;
+  margin-top: 15px;
+}
+form input[type='text'] {
+  width: 25rem;
+  font-size: 2rem;
+}
+#buscar_produtos {
+  padding: 5px;
+  padding-bottom: 1px;
+  padding-top: 4px;
+}
+
+.link {
+  font-family: 'fontCustom1';
+  color: darkblue;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nome_logo {
+  display: inline-block;
+}
+@font-face {
+  font-family: fontCustom1;
+  src: url(./Pragmatica-ExtraLight.ttf);
+}
+.links {
+  width: 40%;
+  float: right;
+}
+.menu_links {
+  list-style-type: none;
+  margin-left: 20%;
+}
+.menu_links li {
+  float: left;
+  padding: 20px;
+}
+.menu_links li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'fontCustom1';
+  color: darkblue;
+}
+.menu_links li a:hover {
+  color: #000eee;
+}
+.menu_links img {
+  cursor: pointer;
+}
