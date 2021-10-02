@@ -34,6 +34,7 @@ header {
 /*SEÇÃO QUE CONTEM IMG-CONTATO*/
 section.contato {
   background-image: url(./imagens/mundo.jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -108,4 +109,14 @@ p.p1 {
   font-weight: bold;
   font-family: 'fontCustom1';
   color: white;
+}
+select {
+  -moz-appearance: none; /*FIREFOX*/
+  -webkit-appearance: none; /*CHROME É SAFARI*/
+  appearance: none; /*PADRÃO*/
+  /*ESSAS PROPIEDADES VAI FAZER COM QUE O SELECT NÃO TENHA MAIS UMA APARENCIA PADRÃO,PARA DARMOS NOSSA PROPRIA APARENCIA*/
+  background-image: url(./imagens/images/arrow.jpg);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px); /* colada no fundo menos 10px*/
+  background-position-y: center;
 }
