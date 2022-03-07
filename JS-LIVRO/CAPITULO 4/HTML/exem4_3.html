@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      var numero = parseInt(prompt('Digite um numero'))
+
+      do {
+        if (numero == 0 || isNaN(numero)) {
+          alert('Digite um numero valido')
+        }
+      } while (numero == 0 || isNaN(numero))
+      var pares = 'Pares entre 1 e' + numero + ': '
+      if (numero > 1) {
+        pares = pares + '2'
+      }
+      for (var i = 4; i <= numero; i = i + 2) {
+        pares = pares + ', ' + i
+      }
+      alert(pares)
+
+      */
+      var numero = parseInt(prompt('Digite um numero'))
+      var pares = 'Pares entre 1 e' + numero + ':'
+      if (numero > 1) {
+        pares = pares + '2'
+      }
+      if (numero == 0 || isNaN(numero)) {
+        alert('Digite um numero valido')
+        location.reload()
+      }
+
+      for (var i = 4; i <= numero; i = i + 2) {
+        pares = pares + ' , ' + i
+      }
+      alert(pares)
+    </script>
+  </body>
+</html>

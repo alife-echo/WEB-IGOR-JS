@@ -136,3 +136,22 @@ const orderedUsers = usersList.sort(a => console.log(a.name, a.credit))
 const numbersList = [1, 2, 3]
 const total = numbersList.reduce((tudo, elementoAtual) => tudo + elementoAtual)
 console.log(total) */
+
+function produtos(name, price, categoria) {
+  return {
+    n: name,
+    p: price,
+    c: categoria
+  }
+}
+const listaProdutos = [
+  produtos('arroz', 5.4, 'D'),
+  produtos('Refrigerante', 8, 'A')
+]
+var lista = listaProdutos.forEach(function ordemPrdutos(elemento) {
+  console.log(elemento.p)
+})
+
+var mod = listaProdutos.map(function ordemPrdutos(elemento) {
+  console.log(elemento.p * 2)
+})

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var jantar = Number(prompt('Digite o valor do jantar:'))
+      var garcom = jantar * 0.1
+      var taxa = garcom + jantar
+      alert(
+        'Valor do jantar : ' +
+          jantar +
+          '\n' +
+          'Taxa do garçom: ' +
+          garcom.toFixed(2) +
+          '\n' +
+          'Total a pagar:' +
+          taxa.toFixed(2)
+        //tofixed especificar o numero de casa decimais que eu quero
+      )
+    </script>
+  </body>
+</html>

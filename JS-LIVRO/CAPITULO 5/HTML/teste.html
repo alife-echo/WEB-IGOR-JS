@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="divider"></div>
+      <div class="section">
+        <!-- Promo Content 1 goes here -->
+        Álife
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <!-- Promo Content 2 goes here -->
+        Silva
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <!-- Promo Content 3 goes here -->
+        Moraes
+      </div>
+    </div>
+
+    <div class="carousel">
+      <a class="carousel-item" href="#one!"
+        ><img src="https://lorempixel.com/250/250/nature/1"
+      /></a>
+      <a class="carousel-item" href="#two!"
+        ><img src="https://lorempixel.com/250/250/nature/2"
+      /></a>
+      <a class="carousel-item" href="#three!"
+        ><img src="https://lorempixel.com/250/250/nature/3"
+      /></a>
+      <a class="carousel-item" href="#four!"
+        ><img src="https://lorempixel.com/250/250/nature/4"
+      /></a>
+      <a class="carousel-item" href="#five!"
+        ><img src="https://lorempixel.com/250/250/nature/5"
+      /></a>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.carousel')
+        var instances = M.Carousel.init(elems, options)
+      })
+    </script>
+  </body>
+</html>

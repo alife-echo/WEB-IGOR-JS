@@ -65,7 +65,7 @@ a img {
 /*---------SEÇAO DE APRESENTAÇAO-------*/
 #apresentacao {
   width: 100%;
-  background: url(./images/info.jpg);
+  background: url(./info.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -152,7 +152,7 @@ a img {
   margin-left: 3rem;
   margin-top: 3rem;
   float: left;
-  background-image: url(./images/embreve.png);
+  background-image: url(./embreve.png);
   background-size: cover;
   background-position: center;
   background-color: black;
@@ -168,7 +168,7 @@ a img {
   font-size: 3rem;
 }
 #box_1 {
-  background-image: url(./images/mundo.jpg);
+  background-image: url(./mundo.jpg);
   background-size: cover;
   background-position: center left;
   position: relative;

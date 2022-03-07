@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        font-size: 1rem;
+        font-weight: bold;
+        list-style: decimal;
+      }
+      #outraCoisa li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="inText" />
+    <input type="button" id="btnAdd" value="ADICIONAR" />
+    <ul id="listaElementos"></ul>
+
+    <script defer>
+      /* var p = document.createElement('p')
+      //p.textContent = 'Álife Cursos'
+      var t = document.createTextNode('Curso de Javascript - Álife Cursos')
+
+      p.appendChild(t)
+      document.body.appendChild(p)
+      */
+
+      //window.addEventListener('load', inicia)
+      var numero
+      numero++
+      function plusTask() {
+        var lista = document.getElementById('listaElementos')
+        var li = document.createElement('li')
+        var inputTexto = document.getElementById('inText')
+        var texto = inputTexto.value
+
+        li.innerHTML = texto
+        lista.appendChild(li)
+        inputTexto.value = ''
+        texto.focus()
+      }
+      var button = document.getElementById('btnAdd')
+      button.addEventListener('click', plusTask)
+    </script>
+  </body>
+</html>

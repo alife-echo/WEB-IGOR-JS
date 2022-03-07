@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      img {
+        float: left;
+        height: 18.75rem;
+        width: 18.75rem;
+      }
+      h1 {
+        border-bottom-style: inset;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <figure><img src="./IMG/peso.png" /></figure>
+    </section>
+
+    <section>
+      <header><h1>Programa Cálculo de Peso Ideal</h1></header>
+
+      <p>Nome:<input type="text" name="entrada Texto" id="inTexto" /></p>
+      <p>
+        Sexo:<input type="radio" name="sexo" id="rbMasculino" />Masculino
+        <input type="radio" name="sexo" id="rbFeminino" />Feminino
+      </p>
+      <p>Altura:<input type="text" id="inAltura" /></p>
+      <input type="button" id="calcPeso" value="Calcular Peso Ideal" />
+      <input type="button" id="limpar" value="Limpar campos" />
+      <p id="outPeso"></p>
+    </section>
+    <script src="./js/exem3_3.js"></script>
+  </body>
+</html>

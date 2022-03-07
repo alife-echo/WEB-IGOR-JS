@@ -1,0 +1,18 @@
+img.normal {
+  float: left;
+  width: 18.75rem;
+  height: 18.75rem;
+}
+img.alta{
+  float: left;
+  height: 26.25rem;
+  width: 18.75rem;
+}
+h1{
+  border-bottom-style: inset;
+  display: inline-block;
+}
+pre{
+  font-size: 1.2em;
+ 
+}
