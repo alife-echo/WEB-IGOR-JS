@@ -12,8 +12,7 @@ btnApostar.addEventListener('click', function () {
   let outErros = document.querySelector('#out_Erros')
   let outChances = document.querySelector('#out_Chances')
   let outDica = document.querySelector('#out_Dica')
-  let outResultado = document.querySelector('#out_Resultado')
-  let conc = ''
+
   if (number <= 0 || number > 100 || isNaN(number)) {
     alert('Insira um numero valido')
     inNumber.focus()
