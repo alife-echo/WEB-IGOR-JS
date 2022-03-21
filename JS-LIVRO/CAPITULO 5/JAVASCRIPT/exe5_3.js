@@ -32,10 +32,36 @@ function listar_carros(plusCar) {
     return
   }
   let list = ''
+
   for (let i = 0; i < carros.length; i++) {
     list +=
-      carros[i].model + ' Preço:' + carros[i].price.toFixed(2) + 'R$' + '<br>'
+      carros[i].model + '-Preço:' + carros[i].price.toFixed(2) + 'R$' + '<br>'
   }
   document.querySelector('#outList').innerHTML = list
 }
-function filter_Car() {}
+
+function filter_Car() {
+  let max = Number(prompt('Qual o valor máximo que o cliente deseja pagar ?!!'))
+
+  if (max == 0 || isNaN(max)) {
+    return
+  }
+  let list = ''
+  for (let i = 0; i < carros.length; i++) {
+    if (carros[i].price <= max) {
+      list += carros[i].model + ' -R$: ' + carros[i].price.toFixed(2) + '\n'
+    }
+  }
+  let outLista = document.querySelector('#outList')
+
+  if (list == '') {
+    outLista.innerHTML =
+      'Não há carros com preço até R$ ' + max.toFixed(2) + '<br/>'
+  } else {
+    outLista.innerHTML =
+      'Carros até R$' +
+      max.toFixed(2) +
+      '<br> ------------------------- <br>' +
+      list
+  }
+}

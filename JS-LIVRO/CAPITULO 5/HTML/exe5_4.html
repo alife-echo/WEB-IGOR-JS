@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .button {
+        padding: 1rem;
+        background-color: black;
+        color: white;
+        font-size: 1rem;
+        outline: none;
+        border: transparent;
+        text-align: center;
+        transition: all 0.5s;
+        
+      }
+      .button span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      .button span::after{
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      .button:hover span{
+        padding-right: 25px;
+      }
+      .button:hover span::after{
+        opacity: 1;
+        right: 0;
+      }
+      .button:active {
+      background-color: #232523;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+      transition: 0.1s;
+  }
+  .input{
+    padding: 10px;
+    transition: 1s;
+    border: transparent;
+    border-bottom: 1px solid black;
+    width: 20rem;
+    
+  }
+  input:focus {
+  background-color: rgb(233, 233, 225);
+  outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+  @font-face {
+      font-family: fontCustom1;
+      src: url(..//../../../SITE_PORTIFOLIO/Pragmatica-ExtraLight.ttf);
+      }
+  label{
+    font-size: 1.3rem;
+    font-family: fontCustom1;
+    font-weight: bold;
+  }
+  h1{
+    font-weight: bold;
+    font-family: fontCustom1;
+    font-size: 2rem;
+  }
+  span{
+    font-family: fontCustom1;
+    font-weight: bold;
+  }
+  p{
+    font-weight: bold;
+    font-family: fontCustom1;
+    font-size: 1.2rem;
+  }
+ 
+ 
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav><h1>Programa Briquedoteca</h1></nav>
+    </header>
+    <section>
+      
+        <label for="in_Name_Child">Nome Criança:</label>
+        <input
+          type="text"
+          class="input"
+          id="in_Name_Child"
+          name="Criança"
+        /><br /> </br>
+        <label for="in_Age">Idade:</label>
+        <input type="text" class="input" id="in_Age" name="Idade" />
+        <button class="button" id="btn_Add"><span >Adicionar</span></button>
+        <br>
+        <br>
+        <button class="button" id="btn_List_ALL"><span>Listar Todos</span></button>
+        <button class="button" id="btn_Sum_up"><span>Resumir por Idade</span></button>
+     <p id="outList"></p>
+    </section>
+    <script src="../JAVASCRIPT/exe5_4.js"></script>
+  </body>
+</html>
