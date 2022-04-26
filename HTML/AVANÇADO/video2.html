@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 640px;
+        height: 360px;
+        position: relative;
+      }
+      .video {
+        width: 100%;
+      }
+      .controle {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /* background-color: coral; */
+        text-align: center;
+      }
+      .btn {
+        width: 60px;
+        position: relative;
+        padding: 10px;
+        top: 100%;
+        transform: translateY(-120%);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <video class="video" id="video1" src="../video/video-1.mp4"></video>
+      <div class="controle">
+        <img class="btn retroceder" src="../assets/back.png" />
+        <img class="btn avancar" src="../assets/fast-forward.png" />
+        <img class="btn aumentar" src="../assets/plus-sign.png" />
+        <img class="btn diminuir" src="../assets/minus-sign.png" />
+        <img class="btn play" src="../assets/botao-play.png" />
+        <img class="btn pause" src="../assets/pausa.png" />
+      </div>
+    </div>
+  </body>
+  <script src="../AVANÇADO/JS/video2.js"></script>
+</html>

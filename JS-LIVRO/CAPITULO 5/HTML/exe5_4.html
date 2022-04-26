@@ -17,11 +17,15 @@
         transition: all 0.5s;
         
       }
-      .button span{
+      .button span{/* colocando transição e posição relativa para usar o positio absolute*/
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
+      }
+    
+      .button:hover span{/*quando eu passar o mouse no botao*/
+        padding-right: 20px;
       }
       .button span::after{
         content: '\00bb';
@@ -31,18 +35,16 @@
         right: -20px;
         transition: 0.5s;
       }
-      .button:hover span{
-        padding-right: 25px;
-      }
-      .button:hover span::after{
+      .button:hover span::after{ /*Depois que o mouse sair do botao*/
         opacity: 1;
         right: 0;
       }
-      .button:active {
+      .button:active { /*Quando o botão for clicado*/
       background-color: #232523;
       box-shadow: 0 5px #666;
       transform: translateY(4px);
       transition: 0.1s;
+      
   }
   .input{
     padding: 10px;

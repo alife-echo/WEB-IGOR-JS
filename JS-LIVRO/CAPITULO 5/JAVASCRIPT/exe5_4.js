@@ -44,7 +44,7 @@ function resumir_Por_Idade() {
     alert('Não a crianças na lista')
     return
   }
-  let copia = child.slice
+  let copia = child.slice()
   copia.sort(function (a, b) {
     return a.age - b.age
   })
@@ -52,5 +52,22 @@ function resumir_Por_Idade() {
   let aux = copia[0].age // menor idade do vetor ordenado
   let names = [] // vetor para colocar os nomes de cada idade
 
-  for (let i = 0; i < copia.length; i++) {}
+  for (let i = 0; i < copia.length; i++) {
+    if (copia[i].age == aux) {
+      // se a idade for igual ao menor idade do vetor = adiciona um nome
+      names.push(copia[i].name)
+    } else {
+      resumo += aux + ' Ano(s):' + names.length + ' criança(s) - ' // mostra a idade e quantas crianças possuem aquela idade
+      resumo += ((names.length / copia.length) * 100).toFixed(2) + '%<br/>' // calculo de porcetagem de crianças
+      //(numeros total de nomes dividido pelo o tamanho do vetor) vezes 100
+      resumo += '(' + names.join(',') + ')<br/><br/>'
+      aux = copia[i].age // obtem a nova idade na ordem
+      names = [] // limpa o vetor nomes
+      names.push(copia[i].name) // adiciona o primeiro da nova idade
+    }
+  }
+  resumo += aux + ' Anos: ' + names.length + ' criança(s) - '
+  resumo += ((names.length / copia.length) * 100).toFixed(2) + '%<br/>'
+  resumo += '(' + names.join(', ') + ') <br/> <br/>'
+  document.querySelector('#outList').innerHTML = resumo
 }
