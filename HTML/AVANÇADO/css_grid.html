@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS GRID AULA</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #7159c1;
+      }
+      header {
+        background-color: yellow;
+
+        /*  grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4; */
+        grid-area: header;
+      }
+      main {
+        background: blue;
+
+        /*  grid-column-start: 1;
+        grid-column-end: 2; */
+        grid-area: main;
+      }
+      aside {
+        background: green;
+
+        /*  grid-column-start: 2;
+        grid-column-end: 3; */
+        grid-area: aside;
+      }
+      footer {
+        background-color: red;
+
+        /* grid-column-start: 1;
+        grid-column-end: 3; */
+        grid-area: footer;
+      }
+
+      .container {
+        display: grid;
+        /* vou querer duas colunas, uma com 25% é outra com 75% */
+        grid-template-columns: 3fr 1fr;
+        /* altura das 3 linhas */
+        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-areas:
+          'header header'
+          'main aside'
+          'footer footer';
+        /* com template area eu posso mudar as posições */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <main></main>
+      <aside></aside>
+      <footer></footer>
+    </div>
+  </body>
+</html>
