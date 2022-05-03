@@ -78,6 +78,20 @@
         font-family: fontCustom1;
         font-size: 1.2rem;
       }
+      .oculta {
+        background-color: #9c620a;
+        box-shadow: 0 5px #666;
+        padding: 1rem;
+        color: white;
+        font-size: 1rem;
+        outline: none;
+        border: transparent;
+        text-align: center;
+        transition: all 2s;
+      }
+      .hidden {
+        visibility: hidden;
+      }
     </style>
   </head>
   <body>
@@ -92,6 +106,9 @@
       <br />
       <button class="button" id="btn_Check_Order">
         <span>Verificar Ordem</span>
+      </button>
+      <button class="hidden" id="btn_reload">
+        <span>Recarregar</span>
       </button>
       <p id="outList"></p>
       <p id="outList2"></p>
