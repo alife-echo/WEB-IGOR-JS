@@ -374,11 +374,12 @@ FORM
     height: 5px;
     width: 100%;
     margin: 6px auto;
+    transition: 0.3s;
   }
   .menu-toggle{
     width: 40px;
     height: 30px;
-    margin-right:20px ;
+    margin-right:40px ;
     
   }
   /*fullscreen*/
@@ -390,6 +391,9 @@ FORM
     height: 100vh;
     background-color: #7159c1;
     z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .menu-section.on nav{
     display: block;
@@ -407,5 +411,15 @@ FORM
   }
   .menu-section.on .menu-toggle .three{
     transform: rotate(-45deg) translate(8px,-10px);
+  }
+  .menu-section.on nav ul {
+    text-align: center;
+    display: block;
+  }
+  .menu-section.on nav ul a{
+    transition: 0.5s;
+    font-size: 3rem;
+    line-height: 4rem;
+    display: block;
   }
 }

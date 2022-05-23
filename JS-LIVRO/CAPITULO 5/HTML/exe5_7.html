@@ -76,6 +76,22 @@
         font-family: fontCustom1;
         src: url(..//../../../SITE_PORTIFOLIO/Pragmatica-ExtraLight.ttf);
       }
+      @media (max-width: 600px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        input {
+          width: 100%;
+        }
+        .button {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 1.3rem;
+      }
     </style>
   </head>
   <body>
@@ -89,8 +105,7 @@
           type="text"
           class="text"
           name="entrada_Texto"
-          id="in_
-      Candidate"
+          id="in_Candidate"
         />
         <br />
         <label for="entrada_Numero">N-Acertos:</label>
@@ -106,9 +121,13 @@
         </button>
 
         <button class="button" id="btn_Aproved">
-          <span>Listar Todos</span>
+          <span>Aprovados</span>
         </button>
       </div>
+      <p id="out_List"></p>
+      <br />
+      <p id="out_List2"></p>
     </section>
+    <script src="../JAVASCRIPT/exe5_7.js"></script>
   </body>
 </html>

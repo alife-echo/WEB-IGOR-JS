@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: fontCustom1;
+        font-weight: bold;
+      }
+
+      header h1 {
+        font-size: 2.7rem;
+      }
+      section {
+        max-width: 980px;
+      }
+      section .container {
+        width: 100%;
+      }
+      input {
+        margin: 5px;
+        padding: 10px;
+        width: 30%;
+      }
+      label {
+        font-size: 1.3rem;
+      }
+      span {
+        font-size: 1.3rem;
+      }
+      button {
+        padding: 15px;
+        width: 30%;
+        background-color: darkolivegreen;
+        outline: none;
+        border: transparent;
+      }
+
+      .button span {
+        position: relative;
+        transition: 0.5s;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .button span::after {
+        content: '\00bb';
+        position: absolute;
+        top: 0;
+        right: -20px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .button:hover span {
+        padding-right: 25px;
+        color: bisque;
+      }
+      .button:hover span::after {
+        opacity: 1;
+        right: 0;
+      }
+      input:focus {
+        background-color: blueviolet;
+        outline: none !important;
+        border-color: #074352;
+        box-shadow: 0 0 10px #3d0230;
+        transition: 2s;
+        border: transparent;
+        color: bisque;
+      }
+      @font-face {
+        font-family: fontCustom1;
+        src: url(..//../../../SITE_PORTIFOLIO/Pragmatica-ExtraLight.ttf);
+      }
+      @media (max-width: 600px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        input {
+          width: 100%;
+        }
+        .button {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav><h1>Programa Últimas Notícias</h1></nav>
+    </header>
+    <section>
+      <div class="container">
+        <label for="entrada_Texto">Noticia:</label>
+        <input type="text" class="text" name="entrada_Texto" id="in_News" />
+
+        <button class="button" id="btn_Add"><span>Adicionar</span></button>
+        <button class="button" id="btn_List_All">
+          <span>Listar Últimas Noticias</span>
+        </button>
+      </div>
+      <h2 id="out_News_Number"></h3>
+      <p id="out_List"></p>
+      <br />
+      <p id="out_List2"></p>
+    </section>
+    <script src="../JAVASCRIPT/exe5_8.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notificação click botão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-row: 1fr;
+        grid-column: 1fr;
+
+        justify-content: center;
+        align-items: center;
+      }
+      .botao {
+        padding: 1rem;
+        background-color: #03a6a6;
+        color: white;
+        font-size: 1rem;
+        outline: none;
+        border: transparent;
+        text-align: center;
+        transition: all 0.5s;
+        border-radius: 5px;
+      }
+      .botao span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .botao span::after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .botao:hover span {
+        padding-right: 25px;
+      }
+      .botao:hover span::after {
+        opacity: 1;
+        right: 0;
+      }
+      .botao:active {
+        background-color: #232523;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+        transition: 0.1s;
+      }
+      .caixa_botao {
+        justify-content: center;
+        width: 100%;
+        display: flex;
+      }
+      .caixa_exibir {
+        opacity: 1;
+        transition: 2s;
+        width: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: #1b82ae;
+        color: white;
+        font-weight: bold;
+        font-family: 'Roboto';
+        border-radius: 5px;
+        position: absolute;
+        left: 80%;
+        top: 10%;
+        outline: none;
+        border: transparent;
+      }
+      .caixa_pop_up {
+        opacity: 0;
+      }
+      .sumir_devagar {
+        opacity: 0;
+        transition: 2s;
+      }
+
+      @media (max-width: 760px) {
+        .caixa_exibir {
+          position: absolute;
+          left: 30%;
+          top: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="caixa_botao">
+        <button class="botao" id="btn_botao"><span>Salvar</span></button>
+        <div class="caixa_pop_up">Alteração Salva</div>
+        <script src="../JAVASCRIPT/botao.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
