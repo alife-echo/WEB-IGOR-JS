@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integral</title>
+    <link
+      rel="shortcut icon"
+      href="./sinal-matematico-integral.png"
+      type="image/x-icon"
+      style="background-color: white"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        background-color: #ffffff;
+      }
+      main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'left right';
+      }
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        grid-area: left;
+      }
+      .sr-only {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+      .input {
+        height: 4rem;
+        padding: 1rem;
+        background-color: #3485ff;
+        width: 65%;
+        border-radius: 0.6rem;
+        display: flex;
+        order: 1;
+        margin-left: 2rem;
+        margin-top: 3rem;
+        font-family: 'Open Sans';
+        font-size: 1.6rem;
+      }
+      .button {
+        background-color: black;
+        cursor: pointer;
+      }
+      span {
+        color: white;
+        margin: auto;
+      }
+      ::placeholder {
+        color: rgb(255, 255, 255);
+      }
+      .images {
+        grid-area: right;
+      }
+      @media (max-width: 870px) {
+        main {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-areas: 'one';
+        }
+        .container {
+          grid-area: one;
+        }
+        .images {
+          grid-area: one;
+        }
+      }
+      @media (max-width: 530px) {
+        .images figure img {
+          width: 100%;
+        }
+      }
+      @media (max-width: 380px) {
+        .input {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+      h2 {
+        font-size: 2rem;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        font-family: 'Open Sans';
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="container">
+        <label for="in_sub_Intervals" class="sr-only"
+          >Digite o numero de sub-intervalos</label
+        >
+        <input
+          type="text"
+          id="in_sub_Intervals"
+          class="input"
+          placeholder="Número de sub-intervalos:"
+        />
+        <label for="in_First_Limit" class="sr-only"
+          >Digite o limite inicial</label
+        >
+        <input
+          type="text"
+          id="in_First_Limit"
+          class="input"
+          placeholder="Limite-Inicial:"
+        />
+        <label for="in_Last_Limit" class="sr-only">Digite o limite Final</label>
+        <input
+          type="text"
+          id="in_Last_Limit"
+          class="input"
+          placeholder="Limite Final:"
+        />
+        <button id="btn_Calculate" class="button input">
+          <span>Calcular Integral</span>
+        </button>
+        <h2 id="out_Result_Integral"></h2>
+      </div>
+      <div class="images">
+        <figure>
+          <img src="./TrapezoidRule1.png" />
+        </figure>
+        <figure>
+          <img src="./latex.png" />
+        </figure>
+      </div>
+    </main>
+    <script src="./JS/integral.js"></script>
+  </body>
+</html>
