@@ -1,9 +1,8 @@
-let btn_Calc = document.querySelector('#btn_Calculate')
-btn_Calc.addEventListener('click', calculate_Integrals)
-function dobrar(x) {
+dobrar = x => {
   return x * x
 }
-function calculate_Integrals() {
+
+calculate_Integrals = () => {
   let in_Intervals = document.querySelector('#in_sub_Intervals')
   let in_Limit_First = document.querySelector('#in_First_Limit')
   let in_Limit_Last = document.querySelector('#in_Last_Limit')
@@ -23,3 +22,5 @@ function calculate_Integrals() {
     (x / 2) * (dobrar(limit_First) + dobrar(limit_Last) + 2 * s)
   out_Integral.textContent = integral_Calc.toFixed(2)
 }
+let btn_Calc = document.querySelector('#btn_Calculate')
+btn_Calc.addEventListener('click', calculate_Integrals)
