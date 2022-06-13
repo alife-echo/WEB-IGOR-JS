@@ -1,25 +1,19 @@
-function students_Elements(student, point1, point2, age) {
-  return { student, point1, point2, age }
+function students_Elements(student, mean, ige) {
+  return { student, mean, ige }
 }
 let class1 = [
-  students_Elements('Álife', 3.4, 9.2, 9),
-  students_Elements('Reginaldo', 9, 7, 7),
-  students_Elements('William', 3, 5, 6),
-  students_Elements('Regis', 7, 7.5, 8)
+  students_Elements('Álife', 7.5, 10),
+  students_Elements('Reginaldo', 6.2, 10),
+  students_Elements('William', 4.8, 10),
+  students_Elements('Regis', 2.5, 10)
 ]
 
-filter = filters => {
-  let running = filters.forEach(element => {
-    return element.point1
+function print(array) {
+  let maps = array.map(mani => {
+    return mani.mean < 5 ? (mani.ige -= 2) : false
   })
 
-  /*  let concept = filters.filter(user => {
-    if (mean >= 7) {
-      return user.student
-    }
-  })
-  return concept */
-  return running
+  return maps
 }
 
-console.log(filter(class1))
+console.log(print(class1))
