@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+      }
+      input {
+        padding: 10px;
+        font-size: 1.5rem;
+      }
+
+      label,
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 2rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section>
+          <h1>Programa Criptografia</h1>
+          <label for="in_Text">Mensagem:</label>
+          <input type="text" class="in_Text" />
+          <input type="button" value="Criptografar" class="btn_Cript" />
+          <input type="button" value="Descriptografar" class="reverse_Cript" />
+          <p class="out"></p>
+        </section>
+      </div>
+    </main>
+    <script src="../JS/prog_crip.js"></script>
+  </body>
+</html>
