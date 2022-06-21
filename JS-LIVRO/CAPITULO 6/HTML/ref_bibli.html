@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: fontCustom1;
+        src: url(./Pragmatica-ExtraLight.ttf);
+      }
+      * {
+        font-family: fontCustom1;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav><h1>REFERÊNCIA BIBLIOGRAFICA</h1></nav>
+    </header>
+    <main>
+      <label for="entrada_texto">Nome do Autor:</label>
+      <input type="text" name="entrada_texto" class="input_Author" />
+      <input
+        type="button"
+        value="GERAR CITAÇÃO BIBLIOGRAFICA"
+        class="btn_Generate"
+      />
+      <p id="out_Result"></p>
+    </main>
+    <script src="../JS/ref_bilbi.js"></script>
+  </body>
+</html>

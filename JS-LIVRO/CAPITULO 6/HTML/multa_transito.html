@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: fontCustom1;
+        src: url(./Pragmatica-ExtraLight.ttf);
+      }
+      * {
+        font-family: fontCustom1;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav><h1>Multa de Trânsito:</h1></nav>
+    </header>
+    <main>
+      <label for="data">Data da Infração:</label>
+      <input type="date" name="data" class="input_Date" />
+      <br />
+      <br />
+      <label for="multa">Valor da Multa R$:</label>
+      <input type="text" name="Forfeit" class="input_Forfeit" />
+      <br />
+      <br />
+      <input
+        type="button"
+        value="Calcular Data Limite e Valor com Desconto"
+        class="btn_Calc"
+      />
+      <p class="out_Result"></p>
+      <p class="out_Result_two"></p>
+    </main>
+    <script src="../JS/multa_transito.js"></script>
+  </body>
+</html>

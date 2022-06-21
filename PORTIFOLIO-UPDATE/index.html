@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,12 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+
     <style>
       * {
         margin: 0;
@@ -43,14 +38,10 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-          'header header'
           'iam img'
           'services services'
           'portfolio portfolio'
           'footer footer';
-      }
-      .container {
-        width: min(36.3rem 100%);
       }
 
       .sr-only {
@@ -71,6 +62,8 @@
           0px 12px 16px -5px rgba(0, 0, 0, 0);
         box-shadow: 0px 10px 13px -7px #000000,
           0px 12px 16px -5px rgba(0, 0, 0, 0);
+        position: sticky;
+        top: 0px;
       }
 
       ul {
@@ -88,11 +81,25 @@
         padding: 35px 20px 20px 20px;
         font-family: 'Poppins';
         height: 9.5rem;
+        position: relative;
+        transition: all 0.5s;
+      }
+      a::before {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        transition: 0.5s;
       }
       a:hover {
-        background-color: #6c7af8;
-        color: white;
+        padding-right: 25px;
+
         transition: 1s;
+      }
+
+      li:hover a::before {
+        opacity: 1;
+        right: 0;
       }
       header nav {
         display: flex;
@@ -101,6 +108,73 @@
       header nav img {
         width: 7%;
         margin-left: 2rem;
+        transition: 1s;
+      }
+      header nav img:hover {
+        transition: 1s;
+        border-radius: 25%;
+        cursor: pointer;
+        -webkit-box-shadow: 1px 2px 16px 5px #8490ff;
+        box-shadow: 1px 2px 16px 5px #8490ff;
+      }
+
+      .left_content {
+        grid-area: iam;
+        width: 100%;
+      }
+      .left_content {
+        display: flex;
+        flex-direction: column;
+      }
+      .left_content div {
+        font-size: 2.8rem;
+      }
+
+      .container.right_content {
+        grid-area: img;
+      }
+      .left_content,
+      .right_content {
+        display: flex;
+        justify-content: center;
+
+        margin: 10%;
+      }
+      @font-face {
+        font-family: fontCustom1;
+        src: url(./Pragmatica-ExtraLight.ttf);
+      }
+      .param {
+        font-family: 'Poppins';
+        margin: 10px;
+        text-align: justify;
+      }
+      .param:first-child {
+        font-size: 2.3rem;
+      }
+      .param:nth-child(2) {
+        font-size: 4rem;
+      }
+      .right_content figure img {
+        width: 70%;
+        margin-left: 7%;
+        -webkit-box-shadow: 0px 10px 13px -7px #000000,
+          0px 12px 16px -5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #000000,
+          0px 12px 16px -5px rgba(0, 0, 0, 0);
+        transition: 1s;
+      }
+      .right_content figure img:hover {
+        transform: scale(1.1);
+        transition: 1s;
+        cursor: pointer;
+
+        -webkit-box-shadow: 1px 2px 16px 5px #8490ff;
+        box-shadow: 1px 2px 16px 5px #8490ff;
+      }
+      .diferent {
+        font-family: fontCustom1;
+        font-size: 2rem;
       }
     </style>
   </head>
@@ -118,9 +192,20 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <section></section>
-      </div>
+      <section class="right_content">
+        <figure>
+          <img src="./img_prog.jpg" alt="foto do desenvolvedor" />
+        </figure>
+      </section>
+      <section class="left_content">
+        <p class="param">OLÁ EU SOU</p>
+        <p class="param">ÁLIFE SILVA DE MORAES</p>
+        <p class="param diferent">
+          Trabalho com desenvolvimento web e estudo tecnologias mobile, site
+          criado para mostrar serviços ofertados, é projetos em que estou
+          trabalhando.
+        </p>
+      </section>
     </main>
   </body>
 </html>
