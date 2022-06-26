@@ -14,7 +14,7 @@ document.querySelector('.btn_Calc').addEventListener('click', () => {
   deadLine.setDate(Number(slices[2]))
   deadLine.setMonth(Number(slices[1]) - 1)
   deadLine.setFullYear(Number(slices[0]))
-  deadLine.setDate(deadLine.getDate() + 90)
+  deadLine.setDate(deadLine.getDate() + 90) //maneira de adicionar dias a uma data
   day_date = deadLine.getDate()
   month_date = deadLine.getMonth() + 1
   year_date = deadLine.getFullYear()
