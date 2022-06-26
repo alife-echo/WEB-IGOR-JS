@@ -17,4 +17,5 @@ if (args[0] == 's') {
 } else {
   c = 'Opcão invalida'
 }
+console.log(calc)
 console.log(c)

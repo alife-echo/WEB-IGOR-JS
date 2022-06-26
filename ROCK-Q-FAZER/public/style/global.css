@@ -23,6 +23,7 @@ html{
 
 body{
   height: 100vh; /* view height pegar o total da tela */
+  display: flex;
   background: var(--background);
 }
 

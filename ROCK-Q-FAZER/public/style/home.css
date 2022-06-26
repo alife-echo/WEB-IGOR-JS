@@ -21,7 +21,7 @@ main{
 }
 main.container{
             /* valor minimo, ele pode ter 100% de largura, mas sempre dara preferencia para o valor minimo */
-  width: min(36.3rem 100%);
+  width: min(36.3rem ,100%);
 }
 main h2{
   font-family: 'Poppins', sans-serif;
