@@ -43,6 +43,13 @@ function rate() {
 function calcDiscont(discont, rate) {
   return { x: discont - discont * rate, y: discont * rate }
 }
+function event_Kepress(key_event) {
+  if (key_event.keyCode == 13) {
+    discont()
+  }
+}
+let key_discont = document.querySelector('.in_Value_vaccine')
+key_discont.addEventListener('keypress', event_Kepress)
 let btn_Discont = document.querySelector('.btn_Discont')
 btn_Discont.addEventListener('click', discont)
 let ratioYes = document.querySelector('#rbYes')
