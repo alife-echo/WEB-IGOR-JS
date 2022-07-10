@@ -1,0 +1,55 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*   body {
+        display: flex;
+      } */
+      * {
+        font-family: fontCustom1;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+      }
+      @font-face {
+        font-family: fontCustom1;
+        src: url(../Pragmatica-ExtraLight.ttf);
+      }
+      input {
+        padding: 10px;
+        margin: 2px;
+        font-family: fontCustom1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Programa Cálculo das Parcelas</h1>
+    </header>
+    <section class="inputs">
+      <label for="input_Price">Preço R$:</label>
+      <input type="text" name="input_Price" class="input_Price" />
+
+      <input
+        type="button"
+        value="Exibir Formas de Pagamento"
+        class="btn_Forms"
+      />
+    </section>
+    <section class="results">
+      <p>Opções de Pagamento</p>
+      <p class="price_Forms"></p>
+    </section>
+    <script src="../JS/calc_parcelas.js"></script>
+  </body>
+</html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Álife</title>
-    <link rel="shortcut icon" href="./code.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./imgs/code.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,6 +13,12 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
@@ -27,7 +33,10 @@
         --main: #f9f9ff;
         --rest: #8490ff;
         --buttons: rgb(247, 247, 19);
+        --black: black;
+        --white: white;
         font-size: 62.5%;
+        scroll-behavior: smooth;
       }
       body {
         height: 100vh;
@@ -39,11 +48,13 @@
         display: grid;
 
         grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50% 15% 25% 35%;
         grid-template-areas:
           'iam img'
+          'ofered ofered'
           'services services'
-          'portfolio portfolio'
+          'projects projects'
+          'contact contact'
           'footer footer';
       }
 
@@ -59,17 +70,21 @@
         border-width: 0;
       }
       header {
-        background-color: white;
+        background-color: var(--white);
         width: 100%;
-        -webkit-box-shadow: 0px 10px 13px -7px #000000,
-          0px 12px 16px -5px rgba(0, 0, 0, 0);
-        box-shadow: 0px 10px 13px -7px #000000,
-          0px 12px 16px -5px rgba(0, 0, 0, 0);
-        position: sticky;
+
+        position: fixed;
         top: 0px;
         z-index: 1;
+        transition-duration: 0.5s;
       }
-
+      .shadow_header {
+        transition-duration: 0.5s;
+      }
+      .shadow_Blue {
+        -webkit-box-shadow: -1px 4px 21px -2px var(--rest);
+        box-shadow: -1px 4px 21px -2px var(--rest);
+      }
       ul {
         display: flex;
         margin-right: 2rem;
@@ -79,7 +94,7 @@
       }
       li a {
         font-size: 2.2rem;
-        color: black;
+        color: var(--black);
         display: block;
         margin-left: 10px;
         padding: 35px 20px 20px 20px;
@@ -118,8 +133,8 @@
         transition: 1s;
         border-radius: 25%;
         cursor: pointer;
-        -webkit-box-shadow: 1px 2px 16px 5px #8490ff;
-        box-shadow: 1px 2px 16px 5px #8490ff;
+        -webkit-box-shadow: 1px 2px 16px 5px var(--rest);
+        box-shadow: 1px 2px 16px 5px var(--rest);
       }
 
       .left_content {
@@ -137,16 +152,26 @@
       .container.right_content {
         grid-area: img;
       }
+
       .left_content,
       .right_content {
         display: flex;
         justify-content: center;
-
-        margin: 10%;
+        padding-left: 10%;
+        background-color: var(--main);
+        height: 100vh;
       }
+      .right_content {
+        align-items: center;
+      }
+
       @font-face {
         font-family: fontCustom1;
         src: url(./Pragmatica-ExtraLight.ttf);
+      }
+      @font-face {
+        font-family: fontCustom2;
+        src: url(./fonts/ADAM.CG\ PRO.otf);
       }
       .param {
         font-family: 'Poppins';
@@ -160,32 +185,130 @@
         font-size: 4rem;
       }
       .right_content figure img {
-        width: 70%;
+        /*  width: 74%; */
+        width: min(74%, 80%, 90%);
         margin-left: 7%;
-        -webkit-box-shadow: 0px 10px 13px -7px #000000,
-          0px 12px 16px -5px rgba(0, 0, 0, 0);
-        box-shadow: 0px 10px 13px -7px #000000,
-          0px 12px 16px -5px rgba(0, 0, 0, 0);
+
         transition: 1s;
+        border-radius: 50%;
+        display: flex;
       }
+      .shadows_Dark {
+        -webkit-box-shadow: 0px 10px 13px -7px var(--black),
+          0px 12px 16px -5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px var(--black),
+          0px 12px 16px -5px rgba(0, 0, 0, 0);
+      }
+
       .right_content figure img:hover {
         transform: scale(1.1);
         transition: 1s;
         cursor: pointer;
 
-        -webkit-box-shadow: 1px 2px 16px 5px #8490ff;
-        box-shadow: 1px 2px 16px 5px #8490ff;
+        -webkit-box-shadow: 1px 2px 16px 5px var(--rest);
+        box-shadow: 1px 2px 16px 5px var(--rest);
       }
       .diferent {
         font-family: fontCustom1;
-        font-size: 2rem;
+        font-size: 2.3rem;
+      }
+      .ofered_container {
+        grid-area: ofered;
+      }
+      .ofered_container div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .title {
+        font-size: 5rem;
+        letter-spacing: 5px;
+        font-family: fontCustom2;
+        margin-bottom: 2rem;
+      }
+      .ofered_container div p {
+        font-size: 1.7rem;
+
+        font-family: 'Roboto';
+        letter-spacing: 3px;
+      }
+      .top_style {
+        -webkit-box-shadow: 0px 6px 7px 1px rgba(128, 10, 255, 0.61);
+        box-shadow: 0px 6px 7px 1px rgba(128, 10, 255, 0.61);
+      }
+      section.services_container {
+        grid-area: services;
+      }
+
+      .services_container figure {
+        display: flex;
+      }
+      .services_container figure img:nth-child(3) {
+        border-radius: 50%;
+      }
+      .services_container figure img {
+        width: 13%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 1s;
+      }
+      .services_container figure img:hover {
+        transition: 1s;
+        transform: translateY(-20px);
+      }
+      .projects_container {
+        grid-area: projects;
+      }
+      .center_text {
+        text-align: center;
+      }
+      .text_param {
+        font-family: 'Roboto';
+        font-size: 1.7rem;
+        letter-spacing: 3px;
+      }
+      /*  .content_projects{
+
+      } */
+      .content_projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .caixa {
+        width: 35rem;
+        height: 300px;
+        display: flex;
+        background-image: url(./imgs/embreve.png);
+        justify-content: space-around;
+        align-items: center;
+        margin: 1.7rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+        cursor: pointer;
+        transition: 0.7s;
+        background-size: cover;
+        background-position: center left;
+      }
+      .caixa:hover {
+        transform: translateY(-20px);
+        transition: 0.7s;
+      }
+      .mundo {
+        background-image: url(./imgs/mundo.jpg);
+      }
+      .portifolio {
+        background-image: url(./imgs/portifolio_antigo.png);
       }
     </style>
   </head>
   <body>
     <header>
       <nav>
-        <img src="./code_plus.png" alt="imagem logo empresa" />
+        <img src="./imgs/code_plus.png" alt="imagem logo empresa" />
         <ul>
           <li><a href="#">HOME</a></li>
           <li><a href="#">ABOUT</a></li>
@@ -198,7 +321,11 @@
     <main>
       <section class="right_content">
         <figure>
-          <img src="./img_prog.jpg" alt="foto do desenvolvedor" />
+          <img
+            class="shadows_Dark"
+            src="./imgs/about_alife-removebg-preview.png"
+            alt="foto do desenvolvedor"
+          />
         </figure>
       </section>
       <section class="left_content">
@@ -210,6 +337,43 @@
           trabalhando.
         </p>
       </section>
+      <section class="ofered_container">
+        <div>
+          <h1 class="title">SERVIÇOS OFERTADOS</h1>
+          <p>
+            Aqui estão algumas tecnologias em que estou aprendendo ou já domino
+            para ofertar ao mercado de trabalho.
+          </p>
+        </div>
+      </section>
+      <section class="services_container">
+        <figure>
+          <img src="./imgs/html-5.png" class="animation" />
+          <img src="./imgs/css-3.png" class="animation" />
+          <img src="./imgs/js.png" class="animation" />
+          <img src="./imgs/nodejs.png" class="animation" />
+          <img src="./imgs/mysql.png" class="animation" />
+        </figure>
+      </section>
+      <section class="projects_container">
+        <section class="title">
+          <h1 class="title center_text">PROJETOS</h1>
+          <p class="center_text text_param">
+            Seção para apresentar projetos em andamento ou já realizados
+          </p>
+        </section>
+        <section class="content_projects">
+          <div class="caixa mundo shadows_Dark"></div>
+          <div class="caixa portifolio shadows_Dark"></div>
+          <div class="caixa shadows_Dark"></div>
+          <div class="caixa shadows_Dark"></div>
+          <div class="caixa shadows_Dark"></div>
+          <div class="caixa shadows_Dark"></div>
+        </section>
+      </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

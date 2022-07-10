@@ -1,0 +1,58 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*   body {
+        display: flex;
+      } */
+      * {
+        font-family: fontCustom1;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+      }
+      @font-face {
+        font-family: fontCustom1;
+        src: url(../Pragmatica-ExtraLight.ttf);
+      }
+      input {
+        padding: 10px;
+        margin: 2px;
+        font-family: fontCustom1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Revenda Herbie-Consignados</h1>
+    </header>
+    <section class="inputs">
+      <label for="input_Car">Modelo do veiculo</label>
+      <input type="text" name="input_car" class="input_Car" />
+      <label for="input_Year">Ano de Fabricação</label>
+      <input type="text" name="input_Year" class="input_Year" />
+      <label for="price_Car">Preço Propietario R$:</label>
+      <input type="text" name="price_Car" class="price_Car" />
+      <input
+        type="button"
+        value="CLASSIFICAR/CALCULAR PREÇO"
+        class="btn_Price"
+      />
+    </section>
+    <section class="results">
+      <p class="car"></p>
+      <p class="price_Sell"></p>
+    </section>
+    <script src="../JS/calc_venda_veiculo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: fontCustom1;
+      }
+      @font-face {
+        font-family: fontCustom1;
+        src: url(../Pragmatica-ExtraLight.ttf);
+      }
+      .forms {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      input,
+      label,
+      pre {
+        padding: 0.8rem;
+        font-size: 1.6rem;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><h1>Programa Senha Inicial:</h1></header>
+      <section class="forms">
+        <label for="in_Name">Nome do Aluno:</label>
+        <input type="text" class="in_Name" />
+        <input
+          type="button"
+          class="btn_Generate_Password"
+          value="GERAR SENHA"
+        />
+        <pre id="out_Result"></pre>
+      </section>
+    </main>
+    <script src="../JS/senha_inicial.js"></script>
+  </body>
+</html>
