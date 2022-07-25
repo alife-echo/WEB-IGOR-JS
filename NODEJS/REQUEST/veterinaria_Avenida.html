@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: fontCustom1;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      label,
+      input,
+      p,
+      select,
+      option {
+        font-size: 1.8rem;
+        margin: 10px;
+      }
+      option {
+        padding: 10px;
+      }
+      input {
+        padding: 1rem;
+      }
+      @font-face {
+        font-family: fontCustom1;
+        src: url(../Pragmatica-ExtraLight.ttf);
+      }
+      .oculta {
+        display: none;
+      }
+      .exibe {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><h1>Veterinária Avenida</h1></header>
+      <section>
+        <label for="input_Value">Valor da Vacina</label>
+        <input type="text" name="" class="in_Value_vaccine" />
+        <p>
+          Possui Covênio
+          <input
+            type="radio"
+            name="resposta"
+            id="rbNo"
+            value="Nao"
+            checked
+          />Não <input type="radio" name="resposta" id="rbYes" value="Sim" />Sim
+        </p>
+        <!--  <section class="convenio oculta"> -->
+        <select id="in_Convenios" class="oculta">
+          <label for="input_Ratio">Convênio:</label>
+          <option value="saude">Saúde Animal</option>
+          <option value="amigo">Amigo dos Animais</option>
+        </select>
+        <!--   </section> -->
+        <input type="button" value="Calcular Desconto" class="btn_Discont" />
+        <p class="outDiscount"></p>
+        <p class="outPay"></p>
+      </section>
+    </main>
+    <script src="../JS/veterinaria_Avenida.js"></script>
+  </body>
+</html>

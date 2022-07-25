@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+        @font-face {
+        font-family: fontCustom1;
+        src: url(../Pragmatica-ExtraLight.ttf);
+      }
+      body{
+          width: 100%;
+          height: 100vh;
+      }
+      main{
+          width: 100%;
+         
+      }
+     
+      .img_todo img {
+          width: 100%;
+      }
+      .img_todo{
+          width: 100%;
+      }
+      h1{
+          border-bottom-style:inset;
+      }
+      .tarefaSelecionada{
+          color: #0984e3;
+          font-style: italic;
+          list-style-type:decimal;
+          font-size: 1.7rem;
+          margin-left: 3.5rem;
+        
+      }
+      .tarefaNormal{
+        color: black;
+      }
+      
+
+      label{
+          font-size: 2rem;
+          font-weight: bold;
+      }
+      input[type='text']{
+          width: 76%;
+          font-size: 1.5rem;
+          padding: 1rem;
+          border:1.99px solid;
+          outline: none;
+          border-top: transparent;
+          border-left: transparent;
+          border-right: transparent;
+          transition: 1s;
+      }
+      input[type='text']:focus{
+          background-color: #ebeff3;
+          transition: 1s;
+       
+      }
+      input[type='button']{
+          margin-top: 1rem;
+          padding: 1rem;
+          font-size: 1.5rem;
+          
+          width: 24%;
+       
+      }
+      input[type='button']:active{
+        transform: translateY(4px);
+        transition: 0.1s;  
+      }
+      .class_atributes{
+         color: white;
+          border: transparent;
+          cursor: pointer;
+          transition: 0.5s;
+      }
+      #btn_Add{
+          background-color:#0984e3 ;
+      }
+      .animatios:hover{
+        transition: 0.5s;
+        transform: scale(1.1);
+        position: relative;
+        z-index:999 ;
+      }
+      #btn_Add:hover{
+        background-color:#6c5ce7 ;
+      }
+      #btn_Select{     
+          background-color: #ff7f50;
+        
+      }
+      #btn_Select:hover{
+        background-color: rgb(247, 111, 61);
+      }
+      #btn_withDraw{
+        background-color: black;
+      }
+    /*   #btn_withDraw,#btn_Select,#btn_Add,#btn_Storage{
+        margin: 0.2rem;
+      } */
+      .elements_todo{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+          margin-left: 1rem;
+      }
+      #btn_Storage{
+        background-color:#0984e3 ;
+
+      
+      }
+      .disappear{
+        display: none;
+      }
+      .numbers{
+        list-style-type:decimal;
+        font-size: 1.7rem;
+        margin-left: 3.5rem;
+        
+      }
+      .content_todo{
+        margin-top: 1.5rem;
+      }
+      #btn_recover{
+        width: 70%;
+        background-color: #6c5ce7;
+        position: relative;
+        left: 10%;
+      }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="elements_todo">
+            <div class="todos">
+            <label for="in_Task">Tarefa:</label>
+            <input type="text" id="in_Task" name="in_Task" placeholder="Insira uma tarefa">
+            <input type="button" value="Adicionar &#10003" id="btn_Add" class="class_atributes animatios">
+            <input type="button" value="Retirar Selecionada &#10007" id="btn_withDraw" 
+            class="class_atributes animatios">
+            <input type="button" value="Selecionar &#8645" id="btn_Select" class="class_atributes animatios">
+            <input type="button" value="Gravar &#9673" id="btn_Storage" class="class_atributes animatios">  
+            <input type="button" value="Restaurar Excluidos" id="btn_recover" class="class_atributes animatios">    
+            </div>
+        </section>
+        <section class="content_todo"></section>
+    </main>
+    <script src="../JS/to_do_list.js"></script>
+</body>
+</html>

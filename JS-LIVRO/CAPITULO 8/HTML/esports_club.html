@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Esportes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:fontCustom1;
+        }
+        @font-face {
+        font-family: fontCustom1;
+        src: url(../Pragmatica-ExtraLight.ttf);
+      }
+      h1,h2{
+          font-size: 4rem;
+          
+          margin-left: 1rem;
+          margin-top: 1rem;
+      }
+      h3{
+          font-size: 2rem;
+      }
+      body{
+          width: 100%;
+          height: 100vh;
+      }
+      main{
+          width: 100%;
+          display: flex;
+          align-items: center;
+        
+      }
+      .info_sports{
+        margin-right: 4rem;
+      }
+      
+    </style>
+</head>
+<body>
+    <main>
+        <section class="info_sports">
+             <h1>Loja de Esportes Avenida</h1>
+             <h2>Produtos esportivas em geral</h2>
+        </section>
+        <section class="choice_clubs">
+             <h3>Qual clube você torce ?</h5>
+             <p>
+             <input type="radio" value="Brasil" class="rt_Brasil" name="clubs">Brasil
+              <br>
+             <input type="radio" value="Pelotas" class="rt_Pelotas" name="clubs">Pelotas
+             <br>
+             <input type="radio" value="Farroupilha" class="rt_Farroupilha"  name="clubs">Farroupilha
+             <br>
+            </p>
+        </section>
+    </main>
+    <script src="../JS/esports_club.js"></script>
+</body>
+</html>
