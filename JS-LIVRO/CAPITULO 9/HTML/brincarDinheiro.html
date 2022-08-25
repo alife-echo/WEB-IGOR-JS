@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo 9.2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Roboto';
+    }
+    #container{
+      display: flex;
+     
+      justify-content: center;
+    }
+  
+  .func_Contents{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  input{
+    padding: 1rem;
+    font-size: 1.3rem;
+
+  }
+  .buttons{
+    cursor: pointer;
+    border: transparent;
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+    position: relative;
+    z-index: 999;
+  }
+  .buttons:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+ 
+  input[type='text']{
+         /*  font-size: 1.5rem;
+          padding: 1rem; */
+          border:1.99px solid;
+          outline: none;
+          border-top: transparent;
+          border-left: transparent;
+          border-right: transparent;
+          transition: 1s;
+          margin-bottom:5px;
+      }
+      input[type='text']:focus{
+          background-color: #ebeff3;
+          transition: 1s;
+       
+      }
+  h1,label{
+    font-size: 1.5rem;
+  }
+  input{
+    margin-top: 5px;
+  }
+  img.moeda1_00{
+    height: 5.25rem;
+    width: 5.25rem;
+    margin-bottom: 0.31rem;
+  }
+  img.moeda0_50{
+    height: 4.12rem;
+    width: 4.12rem;
+    margin-bottom: 0.31rem;
+  }
+  img.moeda0_25{
+    height: 4.75rem;
+    width: 4.75rem;
+    margin-bottom: 0.31rem;
+  }
+  img.moeda0_10{
+    height: 3.75rem;
+    width: 3.75rem;
+    margin-bottom: 0.31rem;
+  }
+  .print{
+    width:100%;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: #6c5ce7;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }.print_error{
+    width:100%;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+ .error{
+  background-color: #95a5a6;
+  color: white;
+  font: bold;
+  transition: 1.5s;
+ }
+  </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+          <section class="coins_Img">
+            <img src="../imgs/coins.png" alt="Moedas Imagem">
+          </section>
+           <section class="func_Contents">
+              <h1>Vamos Brincar de Dinheiro ?</h1>
+              <input type="text" name="input_Coins" id="inCoins" placeholder="A soma é:">
+              <input type="button" value="Conferir Resposta" class="btn_Response buttons">
+              <input type="button" value="Exibir Novas Moedas" class="btn_Display buttons">
+            <section class="responses"></section>
+            
+           </section>
+        </section>
+    </main>
+    <script src="../JS/coins.js"></script>
+</body>
+</html>

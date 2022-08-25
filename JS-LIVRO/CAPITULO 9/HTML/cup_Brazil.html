@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+         *{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              text-decoration: none;
+              font-family: 'Roboto', sans-serif;
+         }
+         .content{
+             display: flex;
+             align-items: flex-start;
+             justify-content: center;
+         }
+         body{
+             width: 100vw;
+             height: 100vh;
+         }
+         .content{
+             width: 100%;
+        
+         }
+         h1{
+             font-size: 2.5rem;
+         }
+         #content_Todo{
+             display: flex;
+             flex-direction: column;
+          
+             width: 100%;
+         }
+         input[type='text']{
+             padding: 1rem;
+             width: 92%;
+             font-size: 1.4rem;
+             border: transparent;
+             background-color: rgb(191, 243, 245);
+             border-radius: 5px;
+             outline: none;
+         }
+         #img_Films{
+             width: 50%;
+             margin-left: 10rem;
+         }
+         img{
+            width: 90%;
+         }
+         .style_Table{
+           display: flex;
+           justify-content:center;
+       
+            
+         }
+         th{
+             font-size: 1.3rem;
+             padding-left: 10rem;
+            
+            
+         }
+         td{
+             padding-left: 10rem;
+             font-size: 1.3rem;
+             margin-top: 1rem;
+         }
+       
+         .style_button{
+             padding: 1rem;
+             width: 30%;
+             border: transparent;
+             margin-top: 0.6rem;
+             cursor: pointer;
+             background-color: #a29bfe;
+             color: white;
+             font-weight: bold;
+             font-size: 1.2rem;
+             border-radius: 5px;
+            
+             transition: 0.3s;
+         }
+         .style_button:nth-child(2),.style_button:nth-child(3){
+          margin-left:0.5rem;
+         }
+         .style_button:hover{
+             transform: scale(1.1);
+             transition: 0.3s;
+             background-color:#0984e3 ;
+         }
+         .style_button:active{
+             transform: translateY(4px);
+             transition: 0.3s;
+         }
+         label{
+             font-size: 1.5rem;
+         }
+         
+        .buttons_flex{
+          display: flex;
+          flex-direction: row;
+       
+        }
+        caption{
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        .content_Elements{
+         text-align: right;
+         margin-top: 1rem;
+         margin-right: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="content">
+         <section id="img_Films">
+               <img src="https://cdn-icons-png.flaticon.com/512/1/1560.png" /> 
+         </section>
+         <section id="content_Todo">
+              <h1>Copa do Brasil-Classificados</h1>
+              <label for="inTitleMovie">Clube</label>
+              <input type="text" name="clube" id="inClub">
+              <div class="buttons_flex">
+              <input type="button" value="Adicionar" class="style_button" id = 'btn_Add'>
+              <input type="button" value="Montar Tabela de Jogos" class="style_button" id = 'btn_Build_Table'>
+              <input type="button" value="Novos Clubes" class="style_button" id = 'btn_new_clubs'>  
+            </div>
+            <div class="content_Elements"></div>
+         </section>
+        
+        </section>
+        <table class="style_Table" id="table_Movies">
+             <caption>Tabela De Jogos<caption>
+          </table>
+    </main>
+    <script src="../JS/cup_Brazil.js"></script>
+</body>
+</html>

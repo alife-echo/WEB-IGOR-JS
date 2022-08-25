@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+         *{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              text-decoration: none;
+              font-family: 'Roboto', sans-serif;
+         }
+         .content{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+         body{
+             width: 100vw;
+             height: 100vh;
+         }
+         .content{
+             width: 100%;
+        
+         }
+         h1{
+             font-size: 2.5rem;
+         }
+         #content_Todo{
+             width: 100%;
+         }
+         input[type='text']{
+             padding: 1rem;
+             width: 70%;
+             font-size: 1.4rem;
+             border: transparent;
+             background-color: rgb(191, 243, 245);
+             border-radius: 5px;
+             outline: none;
+         }
+         #img_Films{
+             width: 50%;
+             margin-left: 10rem;
+         }
+         .style_Table{
+           display: flex;
+           justify-content:center;
+         }
+         th{
+             font-size: 1.3rem;
+             padding-left: 10rem;
+            
+            
+         }
+         td{
+             padding-left: 10rem;
+             font-size: 1.3rem;
+             margin-top: 1rem;
+         }
+       
+         .style_button{
+             padding: 1rem;
+             width: 25%;
+             border: transparent;
+             margin-top: 0.6rem;
+             cursor: pointer;
+             background-color: #a29bfe;
+             color: white;
+             font-weight: bold;
+             font-size: 1.2rem;
+             border-radius: 5px;
+             transition: 0.3s;
+             flex-direction: row;
+         }
+         .style_button:hover{
+             transform: scale(1.1);
+             transition: 0.3s;
+             background-color:#0984e3 ;
+         }
+         .style_button:active{
+             transform: translateY(4px);
+             transition: 0.3s;
+         }
+         label{
+             font-size: 1.5rem;
+         }
+         
+         .button_hidden{
+            display: none;
+         }
+         .button_show{
+            display: inline;
+         }
+         .buttonDelete{
+            width: 16%;
+         }
+         .btnDeleteAll{
+           display: flex;
+           justify-content: center;
+         }
+        tr{
+           border: 1px solid black;
+        }
+        td{   
+           border-radius: 4px;
+            color: black;
+            transition: 0.3s;
+            background-color: #DCEBE6;
+            padding-right: 1rem;
+        }
+        img{
+            width: 80%;
+        }
+        .flex{
+            display: flex;
+            flex-direction: column;
+        }
+        .imagens_numeros{
+          width: 8%;
+        }
+        .offButton{
+          background-color: #95a5a6;
+          transition: 1s;
+          padding: 1rem;
+          width: 25%;
+          border: transparent;
+          margin-top: 0.6rem;
+          color: white;
+          font-weight: bold;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="content">
+         <section id="img_Films">
+               <img src="https://i.pinimg.com/originals/e2/8c/34/e28c343d100a73f1d3ddb93b3c787c3a.png" /> 
+         </section>
+         <section id="content_Todo">
+             <div class="flex">
+              <h1>Velas de aniversario</h1>
+              <label for="inCandlle">Idade:</label>
+              <input type="text" name="candles" id="inCandlle">  
+            </div>    
+              <input type="button" value="Exibir Velas" class="style_button" id = 'btn_Add'> 
+              <input type="button" value="Novas Velas" class="style_button" id = 'btn_New'>
+               
+         </section>       
+    </main>
+ 
+    <script src="../JS/bithday_Candles.js"></script>
+</body>
+</html>
