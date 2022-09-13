@@ -51,26 +51,36 @@ function reserveArmChairs(){
       imgs[i].src = '../imgs/reservers/reservado.png'
       break 
     } */
-    console.log(inputText)
-    for(let i = 0; i<=imgs.length;i++){
-       if(inputText == i){
-        imgs[i].src = '../imgs/reservers/legends.png'
-        console.log(inputText)
-       }
-
+    if(inputText == ''){
+      alert('Informe os dados corretamente')
     }
+    else{
+      for(let i = 0; i<=imgs.length;i++){
+        if(inputText == i){
+          imgs[i].src = '../imgs/reservers/legends.png'
+          console.log(inputText)
+        }
+
+      }
+  }
   }
   function confirmReserveArmChairs(){
     let divStage = document.querySelector('.container_Palco')
     let inputText = Number(document.querySelector('#inText').value)
     let imgs = divStage.querySelectorAll('img')
-    for(let i = 0; i<=imgs.length;i++){
-      if(inputText == i){
-       imgs[i].src = '../imgs/reservers/ocupado.png'
-       console.log(inputText)
-      }
-
-   }
+    if(inputText == ''){
+      alert('Informe os dados corretamente')
+    }
+    else{
+      for(let i = 0; i<=imgs.length;i++){
+        if(inputText == i){
+         imgs[i].src = '../imgs/reservers/ocupado.png'
+         console.log(inputText)
+        }
+  
+     }
+    }
+   
   }
   /*
   for(let j = 0; j<=imgs.length;j++){
